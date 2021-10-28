@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Merida Store</title>
+    <style>
+        html{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            background: white;
+        }
+        body{
+            width: 1330px;
+            height: 3100px;
+            margin:0 auto;
+            background-image: url(snowflakebg.png); 
+        }
+        #firstline{
+            width: 100%;
+            height: 40px;
+            position: relative;
+           }
+        #firstline .email{
+            float: left;
+            line-height: 40px;
+            margin-left: 10px;
+        }
+        #firstline .units{
+            float: left;
+            line-height: 40px;
+            margin-left:900px;
+            color: black;
+            position: relative;
+            display: inline-block;
+        }
+        #firstline .cart{
+            float: left;
+            line-height: 40px;
+            margin-left: 80px;     
+        }
+        #firstline .units .unitscontent {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1; 
+        }
+        #firstline .units:hover .unitscontent{
+            display: block;
+        }
+        #firstline .units:hover{
+            color:yellowgreen;
+        }
+        #header .banner img{
+            width: 100%;
+        }
+        #navbar{
+            width: 100%;
+            height: 50px;
+        }
+        #navbar .logo img{
+           width: 250px;
+           float: left;
+           height: 50px;
+        }
+        #navbar .navbarmenu{
+           color:brown;
+           font-weight: bold;
+        }
+        #navbar .aboutus{
+           float: left;
+           margin-left: 90px;
+           line-height: 50px;
+           color:brown;
+           font-weight: bold;
+           font-size: 1rem;
+        }
+        #navbar .search span{
+            color:white;
+            font-size: 1.3rem;
+            display:block;
+            float:left;
+            margin-top:8px;
+        }
+        #navbar .helpcenter {
+            float: left;
+            position: relative;
+            display: inline-block; 
+            margin-left: 90px;
+            line-height: 50px;
+            color:brown;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        #navbar .helpcentercontent {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+            padding: 4px 4px;
+            z-index: 1;
+        }
+        #navbar .helpcenter:hover .helpcentercontent{
+           display: block; 
+        }
+        #navbar .search{
+            float:left;
+            width:200px;
+            height:30px;
+            margin-top:10px;
+            background:#8F1019;
+            margin-left:100px;
+            border-radius:33px;
+            line-height: 50px;
+        }
+        #navbar .search input{
+            font-weight: bold;
+            background:none;
+            margin-left:9px;
+            margin-top:-11px;
+            color:white;
+            border:none;
+            display: block;
+            float:left;
+            width: 139px;
+        }
+        #navbar .search input:focus{
+            outline: none;
+        }
+        #navbar .search span{
+            color:white;
+            font-size:1.1rem;
+            margin-left: 10px;
+            display: block;
+            float: left;
+            margin-top:4px;
+            margin-right: 20px;   
+        }
+        #header .poster{
+            margin-top: 40px;
+            position: relative;
+            width: 1330px;
+        }
+        #header .poster img{
+            width: 22%;  
+            margin-left: 30px;
+        }
+        #navbar{
+            width: 1330px;
+            height: 50px;
+        }
+        #navbar .navbarmenu>ul{
+            height: 100%;
+            list-style-type: none;
+        }
+        #navbar .navbarmenu>ul>li{
+            margin-left: 50px;
+            height:100%;
+            float:left;
+            text-align: center;
+            line-height: 50px;;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0 20px;
+            color:brown;
+            position: relative;
+        }
+        #navbar .navbarmenu>ul>li>a{
+            color: brown;
+            text-decoration: none;
+        }
+        #navbar .navbarmenu>ul>li:hover{
+            color:blue;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #navbar .navbarmenu>ul>li:hover >a{
+            color:blue;
+        }
+        #navbar .navbarmenu>ul>li>ul{
+            list-style-type:none;
+            width:250px;
+            position: absolute;
+            z-index: 1;
+            left:0;
+            display:none;
+            background: white;
+        }
+        #navbar .navbarmenu>ul>li:hover >ul{
+            display:block;
+            padding:8px 0;
+        }
+        #navbar .navbarmenu>ul>li>ul>li{
+            font-size:0.9rem;
+            text-transform: none;
+            font-weight: normal;
+            height: 35px;
+            line-height: 35px;
+            background: white;
+            color: brown;
+            text-align: left;
+            padding:0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+        }
+        #navbar .navbarmenu>ul>li>ul>li:hover{
+            color:yellowgreen;
+            background:rgba(0, 0, 0, 0.19);
+            animation: slide 1s;
+            border: 1px solid blue;
+        }
+        #navbar .navbarmenu>ul>li>ul>li:hover>a{
+            color:blue;
+        }
+        #navbar .navbarmenu>ul>li>ul>li>a{
+            color: brown;
+            text-decoration: none;
+        }
+        @keyframes slide {
+            0%{left:8px;}
+            20%{left:-6.5px;}
+            40%{left:5px;}
+            60%{left:-3.5px;}
+            80%{left:2px;}
+            100%{left:0;}
+        }
+        #maincontent{
+            width: 100%;
+            height: 1800px;
+        }
+        #maincontent .label{
+            width: 100%;
+            height: 100px;
+        }
+        #maincontent .label p{
+            width: 100%;
+            line-height: 100px;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: black;
+        }
+        #maincontent .label hr{
+            color: black;
+            font-size: 20rem;
+            border-bottom:  7px solid black;
+            width: 400px;
+            margin-left: 470px;
+        }
+        #maincontent .topcontent{
+            float: left;
+            margin-top: 30px;
+            width: 100%;
+        }
+        #maincontent .topcontent img{
+            height: 350px;
+        }
+        #maincontent .topcontent a{
+            display: block;
+            float: left;
+            text-align: center;
+            padding: 30px;
+            width: 33.33%;
+        }
+        #maincontent .topcontent a div{
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top:15px;
+            color: blue;
+        }
+        #maincontent .middlecontent{
+            float: left;
+            margin-top: 30px;
+            width: 100%;
+        }
+        #maincontent .middlecontent img{
+            height: 350px;  
+        }
+        #maincontent .middlecontent a{
+            display: block;
+            float: left;
+            text-align: center;
+            padding: 30px;
+            width: 33.33%;
+        }
+        #maincontent .middlecontent a div{
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top:15px;
+            color: blue;
+        }
+        #maincontent .bottomcontent{
+            float: left;
+            margin-top: 30px;
+            width: 100%;
+        }
+        #maincontent .bottomcontent img{
+            height: 350px;   
+        }
+        #maincontent .bottomcontent a{
+            display: block;
+            float: left;
+            text-align: center;
+            padding:30px;
+            width: 33.33%;
+        }
+        #maincontent .bottomcontent a div{
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top:15px;
+            color: blue;
+        }
+        #socialbar{
+            width: 100%;
+            height: 250px;
+        }
+        #socialbar div{
+            width: 100%;
+            height: 130px;
+        }
+        #socialbar div>p{
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2.2rem;
+            color:#3B5998;
+            text-align: center;
+            line-height: 130px;
+        }
+        #socialbar .icons{
+           width: 100%;
+           height: 100px;
+           text-align: center;
+        }
+        #socialbar .icons .fa{
+            padding: 10px;
+            text-align: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 40px;
+            width: 80px;
+            height: 80px;
+            line-height: 63px;
+            margin: 20px 20px 0px 20px;
+        }
+        #socialbar .icons .fa:hover {
+            opacity: 0.7;
+        }
+        #socialbar .icons .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        #socialbar .icons .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        #socialbar .icons .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+        #socialbar .icons .fa-skype {
+            background: #00aff0;
+            color: white;
+        }
+        #footer{
+           margin: auto;
+           max-width: 1330px;
+           background-color: #125688;
+           padding: 80px 0;
+           display: flex;
+           flex-wrap: wrap;
+        }
+        #footer ul{
+           list-style: none;
+        }
+        #footer .store{
+           width: 33,3%;
+           padding: 0 85px;
+        }
+        #footer .store h4{
+           font-size: 1.2rem;
+           color: white;
+           text-transform: uppercase;
+           margin-bottom: 35px;
+           font-weight: 500;
+           position:relative;
+        }
+        #footer .store h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        #footer .store ul li:not(:last-child){
+	        margin-bottom: 10px
+        }
+        #footer .store ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+        }
+        #footer .policy{
+           width: 33,3%;
+           padding: 0 85px;
+        }
+        #footer .policy h4{
+           font-size: 1.2rem;
+           color: white;
+           text-transform: uppercase;
+           margin-bottom: 35px;
+           font-weight: 500;
+           position:relative;
+        }
+        #footer .policy h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        #footer .policy ul li:not(:last-child){
+	        margin-bottom: 10px
+        }
+        #footer .policy ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+        }
+        #footer .onlinestore{
+            width: 33,3%;
+            padding: 0 85px;
+        }
+        #footer .onlinestore h4{
+            font-size: 1.2rem;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position:relative;
+        }
+        #footer .onlinestore h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        #footer .onlinestore ul li:not(:last-child){
+	        margin-bottom: 10px
+        }
+        #footer .onlinestore ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="firstline">
+        <div class="email">
+            <a href="">Email: support@meridastore.com</a>
+        </div>
+        <div class="units"> Units
+            <div class="unitscontent">
+                <p><a href="">USD</a></p>
+                <p><a href="">CAD</a></p>
+                <p><a href="">AUD</a></p>
+                <p><a href="">GBP</a></p>
+                <p><a href="">EUR</a></p>
+                <p><a href="">JPY</a></p>
+            </div>
+        </div>
+        <div class="cart">
+           <a href="">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+           </a>
+        </div>
+    </div>
+    <div id="navbar">
+        <div class="logo">
+            <img src="logo5.jpg" alt="">
+        </div>
+        <div class="navbarmenu">
+            <ul>
+              <Li>Products
+                <ul>
+                  <li><a href="">Clothings</a></li>
+                  <li><a href="">Decorations</a></li>
+                  <li><a href="">Drinkwares</a></li>
+                </ul>
+              </Li>
+              <Li>Gift for
+                <ul>
+                  <li><a href="">For Dad</a></li>
+                  <li><a href="">For Mom</a></li>
+                  <li><a href="">For Daughter</a></li>
+                  <li><a href="">For Son</a></li>
+                  <li><a href="">For Grandpa</a></li>
+                  <li><a href="">For Grandma</a></li>
+                  <li><a href="">For Girlfriend</a></li>
+                  <li><a href="">For Boyfriend</a></li>
+                </ul>
+              </Li>
+              <li><a href="aboutus.html"> About Us</a></li>
+              <li>Help Center
+                <ul>
+                  <li><a href="">FAQs</a></li>
+                  <li><a href="">Contact us</a></li>
+                  <li><a href="">Shipping Policy</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Searching...">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </div>
+    <div id="header">
+    <div class="banner">
+        <img src="banner4.jpg" alt="">
+    </div>
+    <div class="poster">
+        <a href="">
+            <img src="poster1.jpg" alt="">
+        </a>
+       <a href="">
+        <img src="poster2.jpg" alt="">
+       </a>
+        <a href="">
+            <img src="poster3.jpg" alt="">
+        </a>
+       <a href="">
+        <img src="poster4.jpg" alt="">
+       </a>
+    </div>
+    </div>
+    <div id="maincontent">
+        <div class="label">
+           <p> Top-Selling Items</p>
+           <hr>
+        </div>
+        <div class="topcontent">
+            <a href="">
+                <img src="ornament1sized.jpg" alt="">
+                <div>Gift For Newborn Christmas Ornament</div>
+                <div class="price1">From 19.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </a>
+            <a href="">
+                <img src="ornament2sized.jpg" alt="">
+                <div>Gift For Couple Merry Christmas Ornament</div>
+                <div class="price2">From 23.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </a>
+            <a href="">
+                <img src="ornament5sized.jpg" alt="">
+                <div>Gift For Family Dog Lover Xmas Ornament</div>
+                <div class="price3"> From 25.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </a>
+        </div>
+        <div class="middlecontent">
+            <a href="">
+                <img src="mug3sized.jpg" alt="">
+                <div>Christmas Gift Red Truck Mug</div>
+                <div class="price1">From 21.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </a>
+            <a href="">
+                <img src="mug7sized.jpg" alt="">
+                <div>Xmas Tree Little Gift Mug</div>
+                <div class="price2">From 27.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </a>
+            <a href="">
+                <img src="mug8sized.jpg" alt="">
+                <div>Loves Christmas Tree Mug</div>
+                <div class="price3"> From 29.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </a> 
+        </div>
+        <div class="bottomcontent">
+            <a href="">
+                <img src="sw1sized.jpg" alt="">
+                <div>Merry Christmas Beige Sweater</div>
+                <div class="price1">From 31.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                
+            </a>
+            <a href="">
+                <img src="sw3sized.jpg" alt="">
+                <div>Merry Bright Xmas Sweatshirt</div>
+                <div class="price2">From 33.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </a>
+            <a href="">
+                <img src="sw5sized.jpg" alt="">
+                <div>Gift For Cat Lovers Sweater</div>
+                <div class="price3"> From 35.95$</div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </a> 
+        </div>
+    </div>
+    <div id="socialbar">
+        <div>
+            <p>Come and Say Hello</p>
+        </div>
+        <div class="icons">
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-instagram"></a>
+        <a href="" class="fa fa-skype"></a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="store">
+            <h4>MERIDA STORE</h4>
+            <ul>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Size Chart</a></li>
+                <li><a href="">FAQS</a></li>
+                <li><a href="">News Board</a></li>
+                <li><a href="">Order Modification/Cancellation</a></li>
+            </ul>
+        </div>
+        <div class="policy">
+            <h4>SHIPPING POLICY</h4>
+            <ul>
+                <li><a href="">Shipping & Delivery</a></li>
+                <li><a href="">Return & Refund Policy</a></li>
+                <li><a href="">Billing Terms and Conditions</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">DMCA Request</a></li>
+            </ul>
+        </div>
+        <div class="onlinestore">
+            <h4>Online Store</h4>
+            <ul>
+                <li><a href="">Clothings</a></li>
+                <li><a href="">Decoration</a></li>
+                <li><a href="">Drinkwares</a></li>
+            </ul>
+        </div>
+    </div>
+</body>   
+</html>

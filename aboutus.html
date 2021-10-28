@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is Special About Us</title>
+    <style>
+        html{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            background: white;
+        }
+        body{
+            width: 1330px;
+            height: 3100px;
+            margin:0 auto;
+            background-image: url(snowflakebg.png); 
+        }
+        #firstline{
+            width: 100%;
+            height: 40px;
+            position: relative;
+        }
+        #firstline .email{
+            float: left;
+            line-height: 40px;
+            margin-left: 10px;
+        }
+        #firstline .units{
+            float: left;
+            line-height: 40px;
+            margin-left:900px;
+            color: black;
+            position: relative;
+            display: inline-block;
+        }
+        #firstline .cart{
+            float: left;
+            line-height: 40px;
+            margin-left: 80px;     
+        }
+        #firstline .units .unitscontent {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1; 
+        }
+        #firstline .units:hover .unitscontent{
+            display: block;
+        }
+        #firstline .units:hover{
+            color:yellowgreen;
+        }
+        #header .banner img{
+            width: 100%;
+        }
+        #navbar{
+            width: 100%;
+            height: 50px;
+        }
+        #navbar .logo img{
+           width: 250px;
+           float: left;
+           height: 50px;
+        }
+        #navbar .navbarmenu{
+            color:brown;
+            font-weight: bold;
+        }
+        #navbar .search{
+            float:left;
+            width:200px;
+            height:30px;
+            margin-top:10px;
+            background:#8F1019;
+            margin-left:100px;
+            border-radius:33px;
+            line-height: 50px;
+        }
+        #navbar .search input{
+            font-weight: bold;
+            background:none;
+            margin-left:9px;
+            margin-top:-11px;
+            color:white;
+            border:none;
+            display: block;
+            float:left;
+            width: 139px;
+        }
+        #navbar .search input:focus{
+            outline: none;
+        }
+        #navbar .search span{
+            color:white;
+            font-size:1.1rem;
+            margin-left: 10px;
+            display: block;
+            float: left;
+            margin-top:4px;
+            margin-right: 20px;   
+        }
+        #navbar{
+          width: 1330px;
+          height: 50px;
+        }
+        #navbar .navbarmenu>ul{
+            height: 100%;
+            list-style-type: none;
+        }
+        #navbar .navbarmenu>ul>li{
+          margin-left: 50px;
+            height:100%;
+            float:left;
+            text-align: center;
+            line-height: 50px;;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0 20px;
+            color:brown;
+            position: relative;
+        }
+        #navbar .navbarmenu>ul>li>a{
+            color: brown;
+            text-decoration: none;
+        }
+        #navbar .navbarmenu>ul>li:hover{
+            color:blue;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #navbar .navbarmenu>ul>li:hover >a{
+            color:blue;
+        }
+        #navbar .navbarmenu>ul>li>ul{
+            list-style-type:none;
+            width:250px;
+            position: absolute;
+            z-index: 1;
+            left:0;
+            display:none;
+            background: white;
+        }
+        #navbar .navbarmenu>ul>li:hover >ul{
+            display:block;
+            padding:8px 0;
+        }
+        #navbar .navbarmenu>ul>li>ul>li{
+            font-size:0.9rem;
+            text-transform: none;
+            font-weight: normal;
+            height: 35px;
+            line-height: 35px;
+            background: white;
+            color: brown;
+            text-align: left;
+            padding:0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+        }
+        #navbar .navbarmenu>ul>li>ul>li:hover{
+            color:yellowgreen;
+            background:rgba(0, 0, 0, 0.19);
+            animation: slide 1s;
+            border: 1px solid blue;
+        }
+        #navbar .navbarmenu>ul>li>ul>li:hover>a{
+            color:blue;
+        }
+        #navbar .navbarmenu>ul>li>ul>li>a{
+            color: brown;
+            text-decoration: none;
+        }
+        @keyframes slide {
+            0%{left:8px;}
+            20%{left:-6.5px;}
+            40%{left:5px;}
+            60%{left:-3.5px;}
+            80%{left:2px;}
+            100%{left:0;}
+        }
+        #socialbar{
+           width: 100%;
+           height: 250px;
+        }
+        #socialbar div{
+           width: 100%;
+           height: 130px;
+        }
+        #socialbar div>p{
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2.2rem;
+            color:#3B5998;
+            text-align: center;
+            line-height: 130px;
+        }
+        #socialbar .icons{
+           width: 100%;
+           height: 100px;
+           text-align: center;
+        }
+        #socialbar .icons .fa{
+            padding: 10px;
+            text-align: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 40px;
+            width: 80px;
+            height: 80px;
+            line-height: 63px;
+            margin: 20px 20px 0px 20px;
+        }
+        #socialbar .icons .fa:hover {
+            opacity: 0.7;
+        }
+        #socialbar .icons .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        #socialbar .icons .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        #socialbar .icons .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+        #socialbar .icons .fa-skype {
+            background: #00aff0;
+            color: white;
+        }
+        #footer{
+           margin: auto;
+           max-width: 1330px;
+           background-color: #125688;
+           padding: 80px 0;
+           display: flex;
+           flex-wrap: wrap;
+        }
+        #footer ul{
+           list-style: none;
+        }
+        #footer .store{
+           width: 33,3%;
+           padding: 0 85px;
+        }
+        #footer .store h4{
+           font-size: 1.2rem;
+           color: white;
+           text-transform: uppercase;
+           margin-bottom: 35px;
+           font-weight: 500;
+           position:relative;
+        }
+        #footer .store h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        #footer .store ul li:not(:last-child){
+	        margin-bottom: 10px
+        }
+        #footer .store ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+        }
+        #footer .policy{
+           width: 33,3%;
+           padding: 0 85px;
+        }
+        #footer .policy h4{
+           font-size: 1.2rem;
+           color: white;
+           text-transform: uppercase;
+           margin-bottom: 35px;
+           font-weight: 500;
+           position:relative;
+        }
+        #footer .policy h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        #footer .policy ul li:not(:last-child){
+	        margin-bottom: 10px
+        }
+        #footer .policy ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+        }
+        #footer .onlinestore{
+           width: 33,3%;
+           padding: 0 85px;
+        }
+        #footer .onlinestore h4{
+           font-size: 1.2rem;
+           color: white;
+           text-transform: uppercase;
+           margin-bottom: 35px;
+           font-weight: 500;
+           position:relative;
+        }
+        #footer .onlinestore h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        #footer .onlinestore ul li:not(:last-child){
+	        margin-bottom: 10px
+        }
+        #footer .onlinestore ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+        }
+        #header hr{
+            color: black;
+            font-size: 20rem;
+            border-bottom:  2px solid #7B0000;
+            width: 1330px;
+            margin-left: 0px;
+        }
+        #header{
+           margin-top: 100px;
+           margin-bottom: 50px;
+        }
+        #welcome{
+           width: 1330px;
+        }
+        #welcome h1{
+            text-align: center;
+            padding-bottom: 30px;
+            font-weight: bold;
+        }
+        #welcome p{
+           font-size: 1rem;
+           margin-bottom: 30px;
+        }
+        #inspiration{
+           width: 1330px; 
+           margin-top: 60px; 
+        }
+        #inspiration h1{
+            text-align: center;
+            padding-bottom: 30px;
+            font-weight: bold;
+        }
+        #inspiration p{
+           font-size: 1rem;
+           margin-bottom: 30px;
+        }
+        #inspiration i{
+           font-size: 0.8rem;
+           font-weight: bold;
+        }
+        #products{
+           width: 1330px;
+           margin-top: 60px;
+        }
+        #products h1{
+            text-align: center;
+            padding-bottom: 30px;
+            font-weight: bold;
+        }
+        #products p{
+           font-size: 1rem;
+           margin-bottom: 30px;
+        }
+        #products i{
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        #products ul b{
+           font-size: 1rem;
+        }
+        #products ul{
+           margin-top: 30px;
+        }
+        #products li{
+           font-size: 0.9rem;
+        }
+        #values h1{
+        text-align: center
+        }
+        #address h1{
+        text-align: center
+        }
+        #values{
+           width: 1330px; 
+           margin-top: 60px; 
+        }
+        #values h1{
+            text-align: center;
+            padding-bottom: 30px;
+            font-weight: bold;
+        }
+        #values .serve b{
+            font-size: 1rem;
+            margin-bottom: 20px; 
+        }
+        #values .serve p{
+           font-size: 1rem;
+           margin-bottom:20px;
+        }
+        #values .adapt b{
+            font-size: 1rem;
+            margin-bottom: 20px; 
+        }
+        #values .adapt p{
+           font-size: 1rem;
+           margin-bottom: 20px;
+        }
+        #values .commit b{
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        #values .commit p{
+           font-size: 1rem;
+           margin-bottom: 20px;
+        }
+        #values .stay b{
+            font-size: 1rem;
+            margin-bottom: 20px; 
+        }
+        #values .stay p{
+           font-size: 1rem;
+           margin-bottom: 20px;
+        }
+        #address{
+           width: 1330px;
+           margin-top: 60px;
+        }
+        #address h1{
+            text-align: center;
+            padding-bottom: 30px;
+            font-weight: bold;
+        }
+        #address p{
+           font-size: 1rem;
+           margin-bottom: 30px;
+           font-weight:550;
+        }
+    </style>
+</head>
+<body>
+    <div id="firstline">
+        <div class="email">
+            <a href="">Email: support@meridastore.com</a>
+        </div>
+        <div class="units"> Units
+            <div class="unitscontent">
+                <p><a href="">USD</a></p>
+                <p><a href="">CAD</a></p>
+                <p><a href="">AUD</a></p>
+                <p><a href="">GBP</a></p>
+                <p><a href="">EUR</a></p>
+                <p><a href="">JPY</a></p>
+            </div>
+        </div>
+        <div class="cart">
+           <a href="">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+           </a>
+        </div>
+    </div>
+    <div id="navbar">
+        <div class="logo">
+            <img src="logo5.jpg" alt="">
+        </div>
+        <div class="navbarmenu">
+            <ul>
+              <Li>Products
+                <ul>
+                  <li><a href="">Clothings</a></li>
+                  <li><a href="">Decorations</a></li>
+                  <li><a href="">Drinkwares</a></li>
+                </ul>
+              </Li>
+              <Li>Gift for
+                <ul>
+                  <li><a href="">For Dad</a></li>
+                  <li><a href="">For Mom</a></li>
+                  <li><a href="">For Daughter</a></li>
+                  <li><a href="">For Son</a></li>
+                  <li><a href="">For Grandpa</a></li>
+                  <li><a href="">For Grandma</a></li>
+                  <li><a href="">For Girlfriend</a></li>
+                  <li><a href="">For Boyfriend</a></li>
+                </ul>
+              </Li>
+              <li><a href=""> About Us</a></li>
+              <li>Help Center
+                <ul>
+                  <li><a href="">FAQs</a></li>
+                  <li><a href="">Contact us</a></li>
+                  <li><a href="">Shipping Policy</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Searching...">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </div>
+    <div id="header">
+        <h1>About Us</h1>
+        <hr>
+    </div>
+    <div id="welcome">
+        <h1>Welcome To Merida Store</h1>
+        <p>As our slogan is “You can’t explain but you’ll find our gifts that can”, Merida Store is the place you can find unique and sentimental gifts such as shirts, tees, mugs, posters, canvas, blankets… for your loved ones.</p>
+        <p>We have anything that can be printed here. Our artists and loyal followers are the creative blood in our cottony veins. We strive for bringing only the best and exclusive designs to life.</p>
+        <p>Let our gifts express your love and even untold feelings towards your family members.</p>
+    </div>
+    <div id="inspiration">
+        <h1>Our Inspiration</h1>
+        <p>We are inspired by finding the need of people who want to give their special ones the most personal, thoughtful presents ever which are not common and can be found in regular stores near you. That’s why we created Merida Store to serve all this.</p>
+        
+        <i>“Once I happened to view this shop, I found a little white mug with a very funny and special quote that made me laugh non-stop within 5 minutes. I bought it for my mother-in-law’s birthday and she told me that this can be simple but the most memorable gift she ever had. Thank Merida Store a lot or creating such amazing things”</i>
+        
+        <p><i>-One of our wonderful feedbacks from customers-</i></p>
+      </div>
+      <div id="products">
+          <h1>Our Products</h1>
+          <p>Our creative team works tirelessly to create unique personalized designs and try our best to convey a hidden message in each product. Creativity and non-duplication are our criteria.</p>
+          <p>You have endless options when you visit our store. </p>
+          <i>Every design we carry incorporates elements of creativity. We design goods that:</i>
+          <ul> <b>Full of creativeness</b> </ul>
+          <li>Make us wonder, “Why hasn't anyone thought of this before?</li>
+          <li>Stun us with their beauty and message they deliver</li>
+          <ul> <b>Full of emotion</b></ul>
+          <li>Express our deep thought when we can’t say</li>
+          <li>Bring everyone together by simple but thoughtful gifts</li>
+          <ul><b>Environmentally Friendly</b></ul>
+          <li>We use recycled or sustainable materials whenever possible.</li>
+          <li>We choose environmentally friendlier packing materials.</li>
+          <li>Our products are genuine leather, feather, and fur-free.</li>
+      </div>
+    
+    <div id="values">
+        <h1>Our Values</h1>
+        <div class="serve">
+            <p><b>We Serve</b></p>
+            <p>Our customers are the only ones who determine the value of our goods and services. We strive to meet unmet needs and unmet services.</p>
+        </div>
+        <div class="adapt">
+            <p><b>We Adapt</b></p>
+            <p>Quick change is the only constant in our age. We accept change, celebrate, and always strive to update the latest trends around the world to create the best products.</p>
+        </div>
+       <div class="commit">
+           <p><b>We Commit</b></p>
+           <p>We are always committed to commitment. We are committed to the value of the company, with the law, with customers and partners. We are committed to each other. But above all, we are committed to do the best and become the best we can be.</p>   
+       </div>
+       <div class="stay">
+           <p><b>We Stay Humble</b></p>
+           <p>We have come a long way from humble beginnings and have never lost our humility in the search for new heights.</p>
+       </div>
+    </div>
+    <div id="address">
+        <h1>Get In Touch</h1>
+        <p>Officially launched in 2021, we provide world class customer service to all our customers. Customer satisfaction is our utmost priority.</p>
+        <p>US Address: 544 Las Gallinas Ave, San Rafael, CA 94903</p>
+        <p>UK Address: 28-30 Arcadia Avenue, London, United Kingdom, N3 2JU</p>
+        <p>Email: support@meridastore.com</p>
+    </div>
+    <div id="socialbar">
+        <div>
+            <p>Come and Say Hello</p>
+        </div>
+        <div class="icons">
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-instagram"></a>
+        <a href="" class="fa fa-skype"></a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="store">
+            <h4>MERIDA STORE</h4>
+            <ul>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Size Chart</a></li>
+                <li><a href="">FAQS</a></li>
+                <li><a href="">News Board</a></li>
+                <li><a href="">Order Modification/Cancellation</a></li>
+            </ul>
+        </div>
+        <div class="policy">
+            <h4>SHIPPING POLICY</h4>
+            <ul>
+                <li><a href="">Shipping & Delivery</a></li>
+                <li><a href="">Return & Refund Policy</a></li>
+                <li><a href="">Billing Terms and Conditions</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">DMCA Request</a></li>
+            </ul>
+        </div>
+        <div class="onlinestore">
+            <h4>Online Store</h4>
+            <ul>
+                <li><a href="">Clothings</a></li>
+                <li><a href="">Decoration</a></li>
+                <li><a href="">Drinkwares</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
